@@ -13,14 +13,118 @@
 <p style="padding-left: 30px;">Exam (40%) - 建立包含操作流程影片、心得以及提供檔案下載的網頁後填回自評表單</p>
 <p style="padding-left: 30px;">Final Report (30%) - 利用網頁內容進行簡報並提交 pdf 格式書面報告, 完成後填回自評表單</p>
 <p></p>
-<h1>Class records</h1>
+<h1>tasks</h1>
 <h2>w1</h2>
 <p>下載三個檔案</p>
-<h1>list</h1>
+<h2>task2</h2>
+<h3>w3</h3>
 <p><a href="https://mde.tw/cd2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/9f3df9d865a7ceca8e799ee9b1a31602/raw/113a3d7e19b36a7672a136f3731ef07b095adeef/list_2a.py">列出 2a 學員作業網站與倉儲連結</a></p>
 <p><a href="https://mde.tw/cd2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/9f3df9d865a7ceca8e799ee9b1a31602/raw/29173e8b73ad422fd7c44bcd93658a3579d63633/list_stage_3.py">列出 2b 學員作業網站與倉儲連結</a></p>
 <p><a href="https://mde.tw/cd2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/9f3df9d865a7ceca8e799ee9b1a31602/raw/a4414e311503fac8d57d4f5e44999147c54cf7fa/list_2a_group.py">列出 2a 分組網站與倉儲連結</a></p>
-<p><a href="https://mde.tw/cd2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/9f3df9d865a7ceca8e799ee9b1a31602/raw/a4414e311503fac8d57d4f5e44999147c54cf7fa/list_2b_group.py">列出 2b 分組網站與倉儲連結</a></p><h1>Homework</h1>
+<p><a href="https://mde.tw/cd2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/9f3df9d865a7ceca8e799ee9b1a31602/raw/a4414e311503fac8d57d4f5e44999147c54cf7fa/list_2b_group.py">列出 2b 分組網站與倉儲連結</a></p>
+<p><span style="background-color: #ffff00; color: #333333;">下列程式是本組的分組帳號名單以及分組網頁連結</span></p>
+<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false"># 從  Brython 程式庫中的 browser 導入 html, 可用來輸出超文件內容
+# 而所導入的 document 可以指向網頁中的特定 id 內容
+from browser import html, document
+# 建立 url 變數與網站中 2a 學員的學號與帳號資料 URL 網誌字串對應
+url = "https://mde.tw/list/2a.txt"
+# 利用 open() 物件中的 readlines() 方法, 取出網站中的資料並逐行放入數列中, 因此 data 的資料型別為數列
+data = open(url).readlines()
+# 進行資料查驗時, 印出 data 數列內容
+#print(data)
+# 因為學員資料中的第一列為標題, 因此有效資料從索引值 1 開始
+all_stud = data[1:]
+# 利用 len() 函式查驗 all_stud 數列有幾筆資料, 因為要與前後的字串併接, 因此利用 str() 將整數轉為字串
+print("總共有 " + str(len(all_stud)) + "名學員")
+# 
+# 利用 document[] 取得 id 為 "brython_div1" 的位置, 然後與 brython_div1 變數對應
+brython_div1 = document["brython_div1"]
+# 利用 Brython 的 "&lt;=" 特殊符號, 將右值帶有字串與超文件內容物件插入 brython_div1 變數所指定的位置
+# 其中利用 html.A 建立 anchor 標註物件, 第一個變數為 anchor 字串, 第二個變數則為 hyper text reference
+brython_div1 &lt;= "1. " + html.A("2a-ag6", href="https://mdecd2025.github.io/2a-ag6/") + html.A("(repo)", href="https://github.com/mdecd2025/2a-ag6")
+# 利用 html.BR() 插入 break 標註
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= "2. " + html.A("41223110", href="https://github.com/mdecd2025/hw-41223110")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-41223110")
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= "3. " + html.A("41223133", href="https://mdecd2025.github.io/hw-41223133/")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-41223133")
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= "4. " + html.A("41223129", href="https://mdecd2025.github.io/hw-hong41223129/")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-hong41223129")
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= "5. " + html.A("41223147", href="https://mdecd2025.github.io/hw-41223147/")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-41223147")
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= "6. " + html.A("41223125", href="https://mdecd2025.github.io/hw-Linjiahong41223125")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-Linjiahong41223125")
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= "7. " + html.A("41223132", href="https://mdecd2025.github.io/hw-CHN41223132/")+ html.A("(repo)", href="https://github.com/mdecd2025/hw-CHN41223132")</pre>
+<p><span style="background-color: #ffff00;"></span></p>
+<p><span style="background-color: #ffff00;">目前班上尚未納入組的成員(甲班)</span></p>
+<pre class="brush:csharp;auto-links:false;toolbar:false" contenteditable="false">import urllib.request
+
+# 設定 URL
+url = "https://mde.tw/list/2a.txt"
+
+# 讀取網站內容
+response = urllib.request.urlopen(url)
+data = response.read()  # 讀取原始資料
+
+# 檢查是否為 bytes，若是則解碼
+if isinstance(data, bytes):
+    data = data.decode('utf-8')
+
+# 分割行
+data_lines = data.splitlines()
+
+# 確保資料存在
+if len(data_lines) &gt; 1:
+    all_stud = data_lines[1:]  # 跳過標題列
+    print("總共有 " + str(len(all_stud)) + " 名學員")
+else:
+    all_stud = []
+    print("學員名單讀取失敗")
+
+# 已分組學員帳號
+grouped_accounts = {
+    '41223154', '41271125', '41271158', '41271146', '41271131', 'CYG41223103', '41223102', 
+    '41023128', '41023137', '41223137', '41223157', '41223156', 'otakuyoyo', '41223141', 
+    '41223113', 'kim41223114', 'joeisme1208', '41223116', '41223144', '41223140', '41223143', 
+    '41223138', '41223134', '41223136', 'zhe41223118', 'Spirit0224', 'yuhao-08', '41223158', 
+    'Ren911308', '41223150', 'Manto8', 'CYA41223106', 'yan21ed', 'Lin41223107', '41223133', 
+    'hong41223129', '41223110', '41223147', 'Linjiahong41223125', 'CHN41223132', 
+    'Yu-Fang-Hong', '41023111', 'yckaooooo', 'kolas911205', '41023105', '40932134', '41223104', 
+    'yan41223101', '41223105', '41223153', '41223120', '41223152', 'G8People', 
+    'WSE41223112', '41223146', '41223119'
+}
+
+# 未分組學員清單
+ungrouped_accounts = []
+
+for student in all_stud:
+    parts = student.split()  # 用空格分割學號和帳號
+    if len(parts) == 1:
+        student_id = parts[0]
+        account = student_id  # 如果沒有帳號，將學號當作帳號
+    elif len(parts) == 2:
+        student_id, account = parts
+    
+    account = account.strip()
+    
+    # 如果帳號不在已分組帳號清單中，則加入未分組學員清單
+    if account not in grouped_accounts:
+        ungrouped_accounts.append(student_id)
+
+# 顯示未分組學員的學號，並每行顯示一個學號
+print("未分組學員學號清單：")
+for student_id in ungrouped_accounts:
+    print(student_id)
+</pre>
+<p></p>
+<p>顯示結果如下</p>
+<p>總共有 60 名學員<br/>未分組學員學號清單：<br/>41023220<br/>41223111<br/>41223124<br/>41223148<br/>&lt;completed in 47.30 ms&gt;</p><h1>list</h1>
+<p><a href="https://mde.tw/cd2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/9f3df9d865a7ceca8e799ee9b1a31602/raw/113a3d7e19b36a7672a136f3731ef07b095adeef/list_2a.py">列出 2a 學員作業網站與倉儲連結</a></p>
+<p><a href="https://mde.tw/cd2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/9f3df9d865a7ceca8e799ee9b1a31602/raw/29173e8b73ad422fd7c44bcd93658a3579d63633/list_stage_3.py">列出 2b 學員作業網站與倉儲連結</a></p>
+<p><a href="https://mde.tw/cd2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/9f3df9d865a7ceca8e799ee9b1a31602/raw/a4414e311503fac8d57d4f5e44999147c54cf7fa/list_2a_group.py">列出 2a 分組網站與倉儲連結</a></p>
+<p><a href="https://mde.tw/cd2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/9f3df9d865a7ceca8e799ee9b1a31602/raw/a4414e311503fac8d57d4f5e44999147c54cf7fa/list_2b_group.py">列出 2b 分組網站與倉儲連結</a></p>
+<p></p>
+<h1>Homework</h1>
 <p>作業 (30%)</p>
 <p>HW1 (5%): <span style="background-color: #ffff00;">建立由 Box 組成的平面四連桿機構 Webots 模擬場景</span></p>
 <p style="padding-left: 30px;">part1:</p>
