@@ -124,7 +124,49 @@ for student_id in ungrouped_accounts:
 <p>這周設定近端與ip位置，在同學的協助下設定完成。</p>
 <p><img alt="" height="115" src="/images/1.png" width="219"/><img alt="" height="114" src="/images/2.png" width="219"/></p>
 <p><img alt="" height="152" src="/images/3.png" width="277"/></p>
-<p></p><h1>list</h1>
+<h2>task4</h2>
+<h3>w5</h3>
+<h2>task5</h2>
+<p data-end="219" data-start="0">Webots 是一款專業的移動機器人模擬軟體，適用於快速原型開發。它允許使用者創建具有物理屬性的 3D 虛擬世界，例如質量、關節、摩擦係數等。使用者可以在這些虛擬世界中加入簡單的被動物件或稱為移動機器人的主動物件，這些機器人可以擁有不同的運動方式（如輪式機器人、步態機器人或飛行機器人），並可以配備各種傳感器和執行器，例如距離傳感器、驅動輪、相機、馬達、觸摸傳感器、發射器、接收器等。最後，使用者可以編程每個機器人，使其表現出所需的行為。</p>
+<p data-end="315" data-start="221">Webots 還包含與實際移動機器人的接口，這樣當你模擬的機器人行為達到預期後，可以將其控制程序轉移到像 e-puck、DARwIn-OP、Nao 等實際機器人上。系統還允許添加新的接口。</p>
+<h3 data-end="338" data-start="317">你可以用 Webots 做些什麼？</h3>
+<p data-end="396" data-start="339">Webots 非常適合與移動機器人相關的研究和教育項目。許多移動機器人項目多年來依賴 Webots，涉及以下領域：</p>
+<ul data-end="594" data-start="398">
+<li data-end="439" data-start="398">移動機器人原型設計（學術研究、汽車產業、航空、吸塵器產業、玩具產業、愛好者等）</li>
+<li data-end="467" data-start="440">機器人運動研究（步態、仿人類機器人、四足機器人等）</li>
+<li data-end="491" data-start="468">多智能體研究（群體智慧、協作機器人群體等）</li>
+<li data-end="518" data-start="492">自適應行為研究（遺傳算法、神經網絡、人工智慧等）</li>
+<li data-end="557" data-start="519">機器人教學（機器人課程、C/C++/Java/Python 編程課程等）</li>
+<li data-end="594" data-start="558">機器人競賽（如 Robotstadium 或 Rat's Life）</li>
+</ul>
+<h3 data-end="617" data-start="596">使用 Webots 需要知道什麼？</h3>
+<p data-end="646" data-start="618">使用 Webots 開發模擬需要具備一些基本的技術知識：</p>
+<ul data-end="896" data-start="648">
+<li data-end="765" data-start="648">需要具備 C、C++、Java、Python 或 MATLAB 程式語言的基礎知識來編寫機器人控制程式。即使你不懂這些語言，仍然可以使用簡單的圖形化編程語言 BotStudio 來編程 e-puck 和 Hemisson 機器人。</li>
+<li data-end="896" data-start="766">如果你不想使用 Webots 提供的現有機器人模型，並希望創建自己的機器人模型或在模擬環境中加入特殊物件，則需要具備基本的 3D 電腦圖形學和 VRML97 描述語言的知識。這將使你能夠在 Webots 中創建 3D 模型，或從 3D 建模軟體中匯入模型。</li>
+</ul>
+<h3 data-end="912" data-start="898">如何獲得使用者支援？</h3>
+<p data-end="987" data-start="913">Cyberbotics 提供付費的使用者支援服務，通過其首席服務計劃和定制開發服務來提供幫助。此外，還有社群支援可以使用，但並不保證一定能得到答案：</p>
+<ul data-end="1155" data-start="989">
+<li data-end="1035" data-start="989">Robotics StackExchange 是提出 Webots 技術問題的最佳場所。</li>
+<li data-end="1082" data-start="1036">GitHub Discussions 可用於提出與 Webots 開發和文檔相關的問題。</li>
+<li data-end="1118" data-start="1083">GitHub Issues 只應用於報告 Webots 中的錯誤。</li>
+<li data-end="1155" data-start="1119">Discord 可用於與 Webots 社群進行快速提問和即時討論。</li>
+</ul>
+<h3 data-end="1170" data-start="1157">Webots 模擬</h3>
+<p data-end="1188" data-start="1171">Webots 模擬由以下項目組成：</p>
+<ul data-end="1343" data-start="1190">
+<li data-end="1261" data-start="1190">一個 Webots 世界檔案（.wbt），定義了一個或多個機器人及其環境。該檔案有時會依賴外部的 PROTO 檔案（.proto）和材質。</li>
+<li data-end="1304" data-start="1262">一個或多個機器人的控制程式（C/C++/Java/Python/MATLAB）。</li>
+<li data-end="1343" data-start="1305">可選的物理插件，可用來修改 Webots 的常規物理行為（C/C++）。</li>
+</ul>
+<h3 data-end="1359" data-start="1345">什麼是 World？</h3>
+<p data-end="1597" data-start="1360">在 Webots 中，世界是對機器人及其環境屬性的 3D 描述。它包含每個物件的位置、方向、幾何形狀、外觀（如顏色或亮度）、物理屬性、物件類型等描述。世界是以層次結構組織的，物件可以包含其他物件（如在 VRML97 中）。例如，一個機器人可以包含兩個輪子、一個距離傳感器和一個包含相機的關節等。世界檔案不包含機器人的控制程式代碼；它只指定每個機器人所需的控制程式名稱。世界被保存在 ".wbt" 檔案中，這些檔案存儲在每個 Webots 專案的 "worlds" 子目錄中。</p>
+<h3 data-end="1618" data-start="1599">什麼是 Controller？</h3>
+<p data-end="1787" data-start="1619">控制程式是一個控制世界檔案中所指定的機器人的計算機程式。控制程式可以使用 Webots 支援的任何程式語言編寫：C、C++、Java、Python 或 MATLAB。當模擬啟動時，Webots 會啟動指定的控制程式，並將每個控制程式與相應的模擬機器人關聯。注意，幾個機器人可以使用相同的控制程式代碼，但會為每個機器人啟動一個不同的進程。</p>
+<h3 data-end="1819" data-start="1789">什麼是 Supervisor Controller？</h3>
+<p data-end="1999" data-start="1820">Supervisor 控制程式是指一個機器人的控制程式，該機器人的監控欄位被設置為 TRUE。它可以執行通常只能由人類操作員而非真實機器人執行的操作。Supervisor 控制程式可以使用上述任何程式語言編寫，與普通的機器人控制程式相比，Supervisor 控制程式擁有特權操作的權限，這些特權操作包括模擬控制，例如將機器人移動到隨機位置、拍攝模擬視頻等。</p>
+<h1>list</h1>
 <p><a href="https://mde.tw/cd2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/9f3df9d865a7ceca8e799ee9b1a31602/raw/113a3d7e19b36a7672a136f3731ef07b095adeef/list_2a.py">列出 2a 學員作業網站與倉儲連結</a></p>
 <p><a href="https://mde.tw/cd2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/9f3df9d865a7ceca8e799ee9b1a31602/raw/29173e8b73ad422fd7c44bcd93658a3579d63633/list_stage_3.py">列出 2b 學員作業網站與倉儲連結</a></p>
 <p><a href="https://mde.tw/cd2025/content/Brython.html?src=https://gist.githubusercontent.com/mdecycu/9f3df9d865a7ceca8e799ee9b1a31602/raw/a4414e311503fac8d57d4f5e44999147c54cf7fa/list_2a_group.py">列出 2a 分組網站與倉儲連結</a></p>
